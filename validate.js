@@ -63,39 +63,15 @@ function isValid() {
 }
 
 //Enviando a mensagem
-function sendMessage() {
+function sendMessage (){
     if (isValid()){
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "send_email.php", true);
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                alert('Mensagem enviada!');
-                window.location.reload();
-            }
-        };
-        var formData = {
-            nome: fields.nome.value.trim(),
-            email: fields.email.value.trim(),
-            assunto: fields.assunto.value.trim(),
-            mensagem: fields.mensagem.value.trim()
-        };
-        xhr.send(JSON.stringify(formData));
+        alert ('Mensagem enviada!');
+        window.location.reload();
     }
     else {
-        alert('Ocorreu um erro, confira os seus dados');
+        alert ('Ocorreu um erro, confira os seus dados');
     }
 }
-
-//function sendMessage (){
-//if (isValid()){
-    //alert ('Mensagem enviada!');
-    //window.location.reload();
-//}
-//else {
-    //alert ('Ocorreu um erro, confira os seus dados');
-//}
-//}
 
 //Desabilitar/habilitar o botão
 function toggleButton() {
