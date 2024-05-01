@@ -214,7 +214,7 @@
                 <h2 class="formcontato__title">Contato</h2>
                 <h3 class="formcontato__subtext">Vamos conversar?</h3>
                 <h3 class="formcontato__subtext">Preencha o formulário e entrarei em contato o mais rápido possível. </h3>
-                <form class="formcontato__form" onsubmit="return false">
+                <form class="formcontato__form" onsubmit="return false" method="POST">
                     <input class="formcontato__input" type="text" id="nome" placeholder="Nome">
                     <span class="error-message" id="nome-error"></span>
                     <input class="formcontato__input" type="email" id="email" placeholder="Email">
@@ -223,7 +223,7 @@
                     <span class="error-message" id="assunto-error"></span>
                     <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensagem" placeholder="Sua mensagem"></textarea>
                     <span class="error-message" id="mensagem-error"></span>
-                    <button class="formcontato__botao" onclick="sendMessage();">Enviar mensagem</button>
+                    <button class="formcontato__botao" onclick="sendMessage();" value="Send">Enviar mensagem</button>
                 </form>
             </div>
         </div>
